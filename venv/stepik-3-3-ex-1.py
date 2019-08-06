@@ -11,9 +11,8 @@ for line in sys.stdin:
     # process line
 
 #print(strings)
-pattern = r"(cat).*(cat)"
+pattern = r".*(cat).*(cat)"
 
 for i in strings:
     if re.match(pattern, i) != None:
         print(i)
-
