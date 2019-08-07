@@ -1,19 +1,17 @@
-import sys
-import re
+for i in range(0, 100, 3):
+    print(bin(i)[2:], '-', i)
 
-strings = []
+^((((0+)?1)(10*1)*0)(0(10*1)*0|1)*(0(10*1)*(1(0+)?))|(((0+)?1)(10*1)*(1(0+)?)|(0(0+)?)))$
 
-for line in sys.stdin:
-    line = line.rstrip()
-    if line == '':
-        break
-    strings.append(line)
-    # process line
+^((((0+)?1)(10*1)*0)
+  (0(10*1)*0|1)*
+  (0(10*1)*(1(0+)?))|
 
-#print(strings)
-pattern = r"(cat).*(cat)"
 
-for i in strings:
-    if re.match(pattern, i) != None:
-        print(i)
 
+  (((0+)?1)(10*1)*(1(0+)?)|(0(0+)?)))$
+
+
+
+--------------
+((0+)?1)(10+1)*(1(0+)?)
